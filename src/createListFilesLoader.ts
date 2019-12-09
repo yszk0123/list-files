@@ -6,6 +6,8 @@ export interface ListFilesOptions {
   concurrency?: number;
 }
 
+export type ListFilesLoader = DataLoader<string, string[], string>;
+
 interface DefaultListFilesOptions {
   concurrency: number;
 }
@@ -28,7 +30,9 @@ function listFilesInBatch(
   );
 }
 
-export function createListFilesLoader(_options: ListFilesOptions = {}) {
+export function createListFilesLoader(
+  _options: ListFilesOptions = {},
+): ListFilesLoader {
   const options = { ...defaultOptions, ..._options };
   return new DataLoader((filePaths: readonly string[]) =>
     listFilesInBatch(filePaths, options),

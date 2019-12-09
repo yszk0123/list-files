@@ -1,1 +1,4 @@
-export { createListFilesLoader } from './createListFilesLoader';
+export {
+  createListFilesLoader,
+  ListFilesOptions,
+} from './createListFilesLoader';

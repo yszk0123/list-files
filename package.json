@@ -12,6 +12,9 @@
     "test": "jest",
     "semantic-release": "semantic-release"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",

@@ -16,8 +16,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Install dependencies
-        run: yarn install
+      - name: npm install, build and test
+        run: |
+          yarn install
+          yarn build
+          yarn test
+        env:
+          CI: true
       - name: Release
         run: yarn semantic-release
         env:

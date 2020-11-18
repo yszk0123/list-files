@@ -22,7 +22,7 @@
     "prettier": "^1.19.1",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.3",
-    "semantic-release": "^15.13.31"
+    "semantic-release": "^17.2.3"
   },
   "dependencies": {
     "dataloader": "^2.0.0",
